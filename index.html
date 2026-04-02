@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShipItAndPray — Open Source Projects</title>
+  <meta name="description" content="Open source tools for crypto security, AI infrastructure, text layout, and developer productivity. By ShipItAndPray." />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNV3CN8D2N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NNV3CN8D2N');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #06060b;
+      color: #e8e8f0;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.012) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 60px 24px; position: relative; z-index: 1; }
+    .hero { text-align: center; margin-bottom: 60px; }
+    .hero h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 8px; }
+    .hero h1 span { background: linear-gradient(135deg, #3366ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { color: #8888a0; font-size: 16px; max-width: 500px; margin: 0 auto; }
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #555570; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #1e1e30;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+    .card {
+      background: #12121c; border: 1px solid #1e1e30; border-radius: 10px; padding: 18px;
+      transition: all 0.15s; cursor: pointer; text-decoration: none; color: inherit; display: block;
+    }
+    .card:hover { background: #1a1a28; border-color: rgba(51,102,255,0.3); text-decoration: none; }
+    .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .card p { font-size: 12px; color: #8888a0; line-height: 1.5; }
+    .card .meta { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .card .meta.crypto { color: #ff3366; }
+    .card .meta.infra { color: #00ff88; }
+    .card .meta.pretext { color: #3366ff; }
+    .card .meta.tools { color: #ffaa00; }
+    .tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px; background: rgba(51,102,255,0.1); color: #3366ff; margin-right: 4px; margin-top: 8px; }
+    .links { display: flex; gap: 16px; margin-top: 10px; }
+    .links a { font-size: 11px; color: #3366ff; text-decoration: none; font-weight: 600; }
+    .links a:hover { text-decoration: underline; }
+    .footer { text-align: center; padding-top: 40px; border-top: 1px solid #1e1e30; color: #555570; font-size: 12px; }
+    .footer a { color: #3366ff; }
+    .stat-row { display: flex; justify-content: center; gap: 32px; margin: 24px 0 40px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 28px; font-weight: 800; }
+    .stat-value.blue { color: #3366ff; }
+    .stat-value.green { color: #00ff88; }
+    .stat-value.red { color: #ff3366; }
+    .stat-label { font-size: 10px; color: #555570; text-transform: uppercase; letter-spacing: 0.5px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1><span>ShipItAndPray</span></h1>
+      <p>Open source tools for crypto security, AI infrastructure, and text layout</p>
+      <div class="stat-row">
+        <div class="stat"><div class="stat-value blue">60+</div><div class="stat-label">Repos</div></div>
+        <div class="stat"><div class="stat-value green">50+</div><div class="stat-label">Live Demos</div></div>
+        <div class="stat"><div class="stat-value red">4</div><div class="stat-label">MCP Servers</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Crypto Security</div>
+      <div class="grid">
+        <a class="card" href="https://chain911.vercel.app" target="_blank">
+          <div class="meta crypto">Live Product</div>
+          <h3>chain911</h3>
+          <p>Crypto exploit alert relay. Verified researchers broadcast to protocol teams. Real Postgres backend, real webhook delivery, real exploit data ($2.3B+).</p>
+          <span class="tag">Neon Postgres</span><span class="tag">Vercel</span><span class="tag">Real-time</span>
+          <div class="links"><a href="https://github.com/ShipItAndPray/chain911">GitHub</a><a href="https://chain911.vercel.app">Live App</a></div>
+        </a>
+        <a class="card" href="https://github.com/ShipItAndPray/mcp-market-data" target="_blank">
+          <div class="meta crypto">MCP Server</div>
+          <h3>mcp-market-data</h3>
+          <p>Live crypto market data for AI agents. 8 tools: price, OHLCV, order book, technical analysis. No API keys.</p>
+          <span class="tag">MCP</span><span class="tag">Crypto</span><span class="tag">Real-time</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">AI Infrastructure (MCP Servers)</div>
+      <div class="grid">
+        <a class="card" href="https://github.com/ShipItAndPray/mcp-compress" target="_blank">
+          <div class="meta infra">MCP Server</div>
+          <h3>mcp-compress</h3>
+          <p>Data compression for AI agents. 60x on docs, 30x on SQL. Auto-picks best algorithm. Zero dependencies.</p>
+          <span class="tag">Compression</span><span class="tag">gzip</span><span class="tag">brotli</span>
+        </a>
+        <a class="card" href="https://github.com/ShipItAndPray/mcp-memory" target="_blank">
+          <div class="meta infra">MCP Server</div>
+          <h3>mcp-memory</h3>
+          <p>Smart memory with natural decay. Solves Karpathy's memory problem for AI agents.</p>
+          <span class="tag">Memory</span><span class="tag">Decay</span><span class="tag">Persistence</span>
+        </a>
+        <a class="card" href="https://github.com/ShipItAndPray/turboquant" target="_blank">
+          <div class="meta infra">CLI Tool</div>
+          <h3>turboquant</h3>
+          <p>One-command LLM quantization. GGUF/GPTQ/AWQ. --target size, --push-to-hub, --eval, --recommend.</p>
+          <span class="tag">Quantization</span><span class="tag">GGUF</span><span class="tag">CLI</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Pretext Ecosystem (42 packages)</div>
+      <div class="grid">
+        <a class="card" href="https://shipitandpray.github.io/awesome-pretext/" target="_blank">
+          <div class="meta pretext">Ecosystem Directory</div>
+          <h3>awesome-pretext</h3>
+          <p>Curated list of 42 packages built on Cheng Lou's text layout engine. Live demos for every project.</p>
+          <span class="tag">Pretext</span><span class="tag">42 packages</span>
+          <div class="links"><a href="https://github.com/ShipItAndPray/awesome-pretext">GitHub</a><a href="https://shipitandpray.github.io/awesome-pretext/">Live Site</a></div>
+        </a>
+        <a class="card" href="https://shipitandpray.github.io/pretext-terminal/" target="_blank">
+          <div class="meta pretext">Flagship</div>
+          <h3>pretext-terminal</h3>
+          <p>Canvas-first terminal and log UI for large scrollback and ANSI-rich output.</p>
+          <span class="tag">Terminal</span><span class="tag">Canvas</span>
+        </a>
+        <a class="card" href="https://shipitandpray.github.io/pretext-editor/" target="_blank">
+          <div class="meta pretext">Flagship</div>
+          <h3>pretext-editor</h3>
+          <p>Canvas text editor using Pretext for line measurement instead of DOM text nodes.</p>
+          <span class="tag">Editor</span><span class="tag">Canvas</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><a href="https://github.com/ShipItAndPray">GitHub</a> &middot; <a href="https://x.com/ShipItAndPray">X/Twitter</a></p>
+    </div>
+  </div>
+</body>
+</html>
