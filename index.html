@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShipItAndPray — Open Source Projects</title>
-  <meta name="description" content="Open source tools for crypto security, AI infrastructure, text layout, and developer productivity. By ShipItAndPray." />
+  <title>ShipItAndPray — 100 Open Source Projects</title>
+  <meta name="description" content="Open source tools for crypto security, AI infrastructure, text layout, developer tools, and fun builds. 100 repos, 50+ live demos." />
+  <meta property="og:title" content="ShipItAndPray — 100 Open Source Projects" />
+  <meta property="og:description" content="Crypto security, AI infrastructure, text layout, developer tools. 100 repos, 50+ live demos." />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNV3CN8D2N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,145 +18,190 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: #06060b;
-      color: #e8e8f0;
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.012) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.012) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-    }
-    .container { max-width: 900px; margin: 0 auto; padding: 60px 24px; position: relative; z-index: 1; }
-    .hero { text-align: center; margin-bottom: 60px; }
-    .hero h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 8px; }
-    .hero h1 span { background: linear-gradient(135deg, #3366ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { color: #8888a0; font-size: 16px; max-width: 500px; margin: 0 auto; }
-    .section { margin-bottom: 48px; }
-    .section-title {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      color: #555570; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #1e1e30;
-    }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-    .card {
-      background: #12121c; border: 1px solid #1e1e30; border-radius: 10px; padding: 18px;
-      transition: all 0.15s; cursor: pointer; text-decoration: none; color: inherit; display: block;
-    }
-    .card:hover { background: #1a1a28; border-color: rgba(51,102,255,0.3); text-decoration: none; }
-    .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .card p { font-size: 12px; color: #8888a0; line-height: 1.5; }
-    .card .meta { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
-    .card .meta.crypto { color: #ff3366; }
-    .card .meta.infra { color: #00ff88; }
-    .card .meta.pretext { color: #3366ff; }
-    .card .meta.tools { color: #ffaa00; }
-    .tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px; background: rgba(51,102,255,0.1); color: #3366ff; margin-right: 4px; margin-top: 8px; }
-    .links { display: flex; gap: 16px; margin-top: 10px; }
-    .links a { font-size: 11px; color: #3366ff; text-decoration: none; font-weight: 600; }
-    .links a:hover { text-decoration: underline; }
-    .footer { text-align: center; padding-top: 40px; border-top: 1px solid #1e1e30; color: #555570; font-size: 12px; }
-    .footer a { color: #3366ff; }
-    .stat-row { display: flex; justify-content: center; gap: 32px; margin: 24px 0 40px; flex-wrap: wrap; }
-    .stat { text-align: center; }
-    .stat-value { font-size: 28px; font-weight: 800; }
-    .stat-value.blue { color: #3366ff; }
-    .stat-value.green { color: #00ff88; }
-    .stat-value.red { color: #ff3366; }
-    .stat-label { font-size: 10px; color: #555570; text-transform: uppercase; letter-spacing: 0.5px; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',-apple-system,sans-serif;background:#06060b;color:#e8e8f0;min-height:100vh;line-height:1.6}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+    a{color:#3366ff;text-decoration:none}a:hover{text-decoration:underline}
+    .container{max-width:960px;margin:0 auto;padding:48px 24px;position:relative;z-index:1}
+    .hero{text-align:center;margin-bottom:48px}
+    .hero h1{font-size:38px;font-weight:800;letter-spacing:-1.5px;margin-bottom:6px}
+    .hero h1 span{background:linear-gradient(135deg,#3366ff,#00ff88);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p{color:#8888a0;font-size:15px;max-width:480px;margin:0 auto}
+    .stats{display:flex;justify-content:center;gap:28px;margin:20px 0 32px;flex-wrap:wrap}
+    .stat{text-align:center}.stat-v{font-size:26px;font-weight:800}.stat-l{font-size:10px;color:#555570;text-transform:uppercase;letter-spacing:.5px}
+    .stat-v.b{color:#3366ff}.stat-v.g{color:#00ff88}.stat-v.r{color:#ff3366}.stat-v.a{color:#ffaa00}
+    .search-bar{max-width:400px;margin:0 auto 32px;position:relative}
+    .search-bar input{width:100%;padding:10px 14px 10px 36px;background:#12121c;border:1px solid #1e1e30;border-radius:8px;color:#e8e8f0;font-size:13px;font-family:inherit}
+    .search-bar input:focus{outline:none;border-color:#3366ff}
+    .search-bar::before{content:'\2315';position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#555570;font-size:16px}
+    .section{margin-bottom:36px}
+    .sec-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#555570;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #1e1e30;display:flex;align-items:center;gap:8px}
+    .sec-count{background:#1e1e30;color:#8888a0;font-size:10px;padding:1px 6px;border-radius:10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+    .card{background:#12121c;border:1px solid #1e1e30;border-radius:8px;padding:14px 16px;transition:all .15s;display:block;color:inherit;text-decoration:none!important}
+    .card:hover{background:#1a1a28;border-color:rgba(51,102,255,.3)}
+    .card h3{font-size:14px;font-weight:700;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .card p{font-size:11px;color:#8888a0;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .card .m{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
+    .m.crypto{color:#ff3366}.m.mcp{color:#00ff88}.m.pretext{color:#3366ff}.m.buddy{color:#aa66ff}.m.tool{color:#ffaa00}.m.fun{color:#00ccff}.m.vercel{color:#fff}
+    .card .links{display:flex;gap:10px;margin-top:6px}
+    .card .links a{font-size:10px;color:#3366ff;font-weight:600}
+    .footer{text-align:center;padding-top:32px;border-top:1px solid #1e1e30;color:#555570;font-size:12px;margin-top:20px}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="hero">
-      <h1><span>ShipItAndPray</span></h1>
-      <p>Open source tools for crypto security, AI infrastructure, and text layout</p>
-      <div class="stat-row">
-        <div class="stat"><div class="stat-value blue">60+</div><div class="stat-label">Repos</div></div>
-        <div class="stat"><div class="stat-value green">50+</div><div class="stat-label">Live Demos</div></div>
-        <div class="stat"><div class="stat-value red">4</div><div class="stat-label">MCP Servers</div></div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Crypto Security</div>
-      <div class="grid">
-        <a class="card" href="https://chain911.vercel.app" target="_blank">
-          <div class="meta crypto">Live Product</div>
-          <h3>chain911</h3>
-          <p>Crypto exploit alert relay. Verified researchers broadcast to protocol teams. Real Postgres backend, real webhook delivery, real exploit data ($2.3B+).</p>
-          <span class="tag">Neon Postgres</span><span class="tag">Vercel</span><span class="tag">Real-time</span>
-          <div class="links"><a href="https://github.com/ShipItAndPray/chain911">GitHub</a><a href="https://chain911.vercel.app">Live App</a></div>
-        </a>
-        <a class="card" href="https://github.com/ShipItAndPray/mcp-market-data" target="_blank">
-          <div class="meta crypto">MCP Server</div>
-          <h3>mcp-market-data</h3>
-          <p>Live crypto market data for AI agents. 8 tools: price, OHLCV, order book, technical analysis. No API keys.</p>
-          <span class="tag">MCP</span><span class="tag">Crypto</span><span class="tag">Real-time</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">AI Infrastructure (MCP Servers)</div>
-      <div class="grid">
-        <a class="card" href="https://github.com/ShipItAndPray/mcp-compress" target="_blank">
-          <div class="meta infra">MCP Server</div>
-          <h3>mcp-compress</h3>
-          <p>Data compression for AI agents. 60x on docs, 30x on SQL. Auto-picks best algorithm. Zero dependencies.</p>
-          <span class="tag">Compression</span><span class="tag">gzip</span><span class="tag">brotli</span>
-        </a>
-        <a class="card" href="https://github.com/ShipItAndPray/mcp-memory" target="_blank">
-          <div class="meta infra">MCP Server</div>
-          <h3>mcp-memory</h3>
-          <p>Smart memory with natural decay. Solves Karpathy's memory problem for AI agents.</p>
-          <span class="tag">Memory</span><span class="tag">Decay</span><span class="tag">Persistence</span>
-        </a>
-        <a class="card" href="https://github.com/ShipItAndPray/turboquant" target="_blank">
-          <div class="meta infra">CLI Tool</div>
-          <h3>turboquant</h3>
-          <p>One-command LLM quantization. GGUF/GPTQ/AWQ. --target size, --push-to-hub, --eval, --recommend.</p>
-          <span class="tag">Quantization</span><span class="tag">GGUF</span><span class="tag">CLI</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Pretext Ecosystem (42 packages)</div>
-      <div class="grid">
-        <a class="card" href="https://shipitandpray.github.io/awesome-pretext/" target="_blank">
-          <div class="meta pretext">Ecosystem Directory</div>
-          <h3>awesome-pretext</h3>
-          <p>Curated list of 42 packages built on Cheng Lou's text layout engine. Live demos for every project.</p>
-          <span class="tag">Pretext</span><span class="tag">42 packages</span>
-          <div class="links"><a href="https://github.com/ShipItAndPray/awesome-pretext">GitHub</a><a href="https://shipitandpray.github.io/awesome-pretext/">Live Site</a></div>
-        </a>
-        <a class="card" href="https://shipitandpray.github.io/pretext-terminal/" target="_blank">
-          <div class="meta pretext">Flagship</div>
-          <h3>pretext-terminal</h3>
-          <p>Canvas-first terminal and log UI for large scrollback and ANSI-rich output.</p>
-          <span class="tag">Terminal</span><span class="tag">Canvas</span>
-        </a>
-        <a class="card" href="https://shipitandpray.github.io/pretext-editor/" target="_blank">
-          <div class="meta pretext">Flagship</div>
-          <h3>pretext-editor</h3>
-          <p>Canvas text editor using Pretext for line measurement instead of DOM text nodes.</p>
-          <span class="tag">Editor</span><span class="tag">Canvas</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p><a href="https://github.com/ShipItAndPray">GitHub</a> &middot; <a href="https://x.com/ShipItAndPray">X/Twitter</a></p>
+<div class="container">
+  <div class="hero">
+    <h1><span>ShipItAndPray</span></h1>
+    <p>Open source tools for crypto security, AI infrastructure, text layout, and developer fun</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-v b">100</div><div class="stat-l">Repos</div></div>
+      <div class="stat"><div class="stat-v g">50+</div><div class="stat-l">Live Demos</div></div>
+      <div class="stat"><div class="stat-v r">4</div><div class="stat-l">MCP Servers</div></div>
+      <div class="stat"><div class="stat-v a">42</div><div class="stat-l">Pretext Packages</div></div>
     </div>
   </div>
+
+  <div class="search-bar"><input type="search" id="search" placeholder="Search 100 projects..." /></div>
+  <div id="projects"></div>
+
+  <div class="footer">
+    <p><a href="https://github.com/ShipItAndPray">GitHub</a> &middot; <a href="https://x.com/ShipItAndPray">X/Twitter</a></p>
+  </div>
+</div>
+
+<script>
+const projects = [
+  // ===== CRYPTO SECURITY =====
+  { cat: 'Crypto Security', cls: 'crypto', name: 'chain911', desc: 'Crypto exploit alert relay. Verified researchers broadcast to protocol teams. Real Postgres, real webhooks, $2.3B+ real exploit data.', gh: 'chain911', demo: 'https://chain911.vercel.app', featured: true },
+  { cat: 'Crypto Security', cls: 'crypto', name: 'mcp-market-data', desc: 'Live crypto market data MCP server. 8 tools: price, OHLCV, order book, technical analysis. No API keys.', gh: 'mcp-market-data' },
+
+  // ===== MCP SERVERS =====
+  { cat: 'MCP Servers', cls: 'mcp', name: 'mcp-compress', desc: 'Data compression for AI agents. 60x on docs, 30x on SQL. Auto-picks best algorithm. Zero dependencies.', gh: 'mcp-compress' },
+  { cat: 'MCP Servers', cls: 'mcp', name: 'mcp-memory', desc: 'Smart memory with natural decay. Solves Karpathy\'s memory problem for AI agents.', gh: 'mcp-memory' },
+  { cat: 'MCP Servers', cls: 'mcp', name: 'mcp-turboquant', desc: 'LLM quantization MCP server. Compress any model to GGUF/GPTQ/AWQ in one tool call.', gh: 'mcp-turboquant' },
+  { cat: 'MCP Servers', cls: 'mcp', name: 'mcp-buddy', desc: 'MCP server exposing Claude Code /buddy stats and personality as tools.', gh: 'mcp-buddy', demo: 'https://shipitandpray.github.io/mcp-buddy/' },
+
+  // ===== AI / ML TOOLS =====
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'turboquant', desc: 'One-command LLM quantization CLI. GGUF/GPTQ/AWQ. --target size, --push-to-hub, --eval, --recommend.', gh: 'turboquant' },
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'turboquant-kv', desc: '6x KV Cache compression for LLMs. Based on Google TurboQuant (PolarQuant + QJL).', gh: 'turboquant-kv' },
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'eggroll', desc: 'Gradient-free fine-tuning for any HuggingFace model. EGGROLL Evolution Strategies.', gh: 'eggroll' },
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'haas', desc: 'Hallucination as a Service. Generate controlled synthetic data with intentional hallucinations.', gh: 'haas' },
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'fontcode', desc: 'Zero-dependency font rendering as code. 47K Unicode glyphs rasterized to C/Rust arrays.', gh: 'fontcode' },
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'prompt2bin', desc: 'Turn English into executables. Prompt to Binary. No code.', gh: 'prompt2bin' },
+  { cat: 'AI / ML Tools', cls: 'tool', name: 'aura-turbo', desc: 'Compressed persistent memory for AI agents. MCP server with zlib compression.', gh: 'aura-turbo' },
+
+  // ===== DEVELOPER TOOLS =====
+  { cat: 'Developer Tools', cls: 'tool', name: 'maintainer-shield', desc: 'Stop AI slop PRs. Auto-triage issues. Score contributor reputation. GitHub Action.', gh: 'maintainer-shield', demo: 'https://github.com/marketplace/actions/maintainer-shield' },
+  { cat: 'Developer Tools', cls: 'tool', name: 'compliance-agent', desc: 'Scans Python trading code for financial regulatory compliance violations (FINRA, SEC).', gh: 'compliance-agent' },
+  { cat: 'Developer Tools', cls: 'tool', name: 'privacy-label', desc: 'Privacy nutrition label for any website. One command: scan, score, compare.', gh: 'privacy-label' },
+  { cat: 'Developer Tools', cls: 'tool', name: 'job-apply-ai', desc: 'AI-powered job application pipeline. Search, tailor resumes, auto-fill ATS forms.', gh: 'job-apply-ai' },
+  { cat: 'Developer Tools', cls: 'tool', name: 'orbital-compute', desc: 'Simulate and schedule GPU compute jobs across satellite constellations.', gh: 'orbital-compute', demo: 'https://shipitandpray.github.io/orbital-compute/' },
+  { cat: 'Developer Tools', cls: 'tool', name: 'retrofitai', desc: 'Free home energy upgrade planner. Shows what to upgrade first, cost vs savings.', gh: 'retrofitai' },
+  { cat: 'Developer Tools', cls: 'tool', name: 'plate-checker', desc: 'Will your license plate get rejected? Check upside down, mirrored, leet-decoded.', gh: 'plate-checker', demo: 'https://shipitandpray.github.io/plate-checker' },
+
+  // ===== PRETEXT ECOSYSTEM =====
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'awesome-pretext', desc: 'Curated ecosystem list of 42 packages built on Cheng Lou\'s text layout engine.', gh: 'awesome-pretext', demo: 'https://shipitandpray.github.io/awesome-pretext/', featured: true },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-react', desc: 'React hooks and UI primitives for @chenglou/pretext.', gh: 'pretext-react', demo: 'https://shipitandpray.github.io/pretext-react/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-chat', desc: 'Chat UI with precomputed message sizing and streaming-friendly layout.', gh: 'pretext-chat', demo: 'https://shipitandpray.github.io/pretext-chat/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-terminal', desc: 'Canvas-first terminal and log UI for large scrollback and ANSI-rich output.', gh: 'pretext-terminal', demo: 'https://shipitandpray.github.io/pretext-terminal/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-editor', desc: 'Canvas text editor using Pretext for line measurement instead of DOM text nodes.', gh: 'pretext-editor', demo: 'https://shipitandpray.github.io/pretext-editor/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-pdf', desc: 'PDF generation with proper text wrapping using Pretext + pdf-lib.', gh: 'pretext-pdf', demo: 'https://shipitandpray.github.io/pretext-pdf/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-canvas', desc: 'Canvas and WebGL text rendering helpers powered by Pretext.', gh: 'pretext-canvas', demo: 'https://shipitandpray.github.io/pretext-canvas/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-table', desc: 'Virtualized data table with Pretext-powered column auto-sizing. 10K+ rows.', gh: 'pretext-table', demo: 'https://shipitandpray.github.io/pretext-table/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-diff', desc: 'Virtualized side-by-side diff viewer. Handles 100K+ line diffs.', gh: 'pretext-diff', demo: 'https://shipitandpray.github.io/pretext-diff/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-markdown', desc: 'Streaming markdown renderer with zero layout shift.', gh: 'pretext-markdown', demo: 'https://shipitandpray.github.io/pretext-markdown/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-blocks', desc: 'Notion-style block editor virtualization with predicted heights.', gh: 'pretext-blocks', demo: 'https://shipitandpray.github.io/pretext-blocks/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-slides', desc: 'Markdown-to-canvas presentation tool.', gh: 'pretext-slides', demo: 'https://shipitandpray.github.io/pretext-slides/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-epub', desc: 'EPUB pagination engine with O(1) page access.', gh: 'pretext-epub', demo: 'https://shipitandpray.github.io/pretext-epub/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-docgen', desc: 'PDF generation without Puppeteer. Pure JS. 100x cheaper than headless Chrome.', gh: 'pretext-docgen', demo: 'https://shipitandpray.github.io/pretext-docgen/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-captions', desc: 'Subtitle editor and renderer. SRT/VTT/ASS, WCAG compliance.', gh: 'pretext-captions', demo: 'https://shipitandpray.github.io/pretext-captions/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-infinite-canvas', desc: 'Figma/Miro-style infinite canvas with pixel-perfect text at any zoom.', gh: 'pretext-infinite-canvas', demo: 'https://shipitandpray.github.io/pretext-infinite-canvas/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-masonry', desc: 'Pinterest-style masonry grid with height prediction. 10K+ cards.', gh: 'pretext-masonry', demo: 'https://shipitandpray.github.io/pretext-masonry/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-accordion', desc: 'Zero-CLS accordion with predictive height measurement.', gh: 'pretext-accordion', demo: 'https://shipitandpray.github.io/pretext-accordion/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-forms', desc: 'Auto-sizing textarea, input, select without DOM reflow.', gh: 'pretext-forms', demo: 'https://shipitandpray.github.io/pretext-forms/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-tooltip', desc: 'Tooltips that know their size before render.', gh: 'pretext-tooltip', demo: 'https://shipitandpray.github.io/pretext-tooltip/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-truncate', desc: 'Multiline truncation without content flash.', gh: 'pretext-truncate', demo: 'https://shipitandpray.github.io/pretext-truncate/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-typewriter', desc: 'Zero-shift streaming text animations. Pre-measures final height.', gh: 'pretext-typewriter', demo: 'https://shipitandpray.github.io/pretext-typewriter/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-animate', desc: 'Physics-based text animations. 120fps. Zero layout reflows.', gh: 'pretext-animate', demo: 'https://shipitandpray.github.io/pretext-animate/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-comic', desc: 'Comic speech bubbles with shape-aware text fitting. 6 built-in shapes.', gh: 'pretext-comic', demo: 'https://shipitandpray.github.io/pretext-comic/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-og', desc: 'OG image generator fixing Satori wrapping bugs.', gh: 'pretext-og', demo: 'https://shipitandpray.github.io/pretext-og/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-tts-highlight', desc: 'Karaoke-style word highlighting synced to TTS.', gh: 'pretext-tts-highlight', demo: 'https://shipitandpray.github.io/pretext-tts-highlight/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-webxr', desc: '3D text rendering for WebXR/Three.js using Pretext.', gh: 'pretext-webxr', demo: 'https://shipitandpray.github.io/pretext-webxr/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-logviewer', desc: '10M+ line log viewer with ANSI colors and virtualized scroll.', gh: 'pretext-logviewer', demo: 'https://shipitandpray.github.io/pretext-logviewer/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-gantt', desc: 'Zero-flicker Gantt chart. Labels placed on frame 1.', gh: 'pretext-gantt', demo: 'https://shipitandpray.github.io/pretext-gantt/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-sparkline', desc: 'Inline sparklines with collision-free value labels.', gh: 'pretext-sparkline', demo: 'https://shipitandpray.github.io/pretext-sparkline/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-map-labels', desc: 'Collision-free label placement for maps and diagrams.', gh: 'pretext-map-labels', demo: 'https://shipitandpray.github.io/pretext-map-labels/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-word-cloud', desc: 'Deterministic word cloud layout. 500x faster than d3-cloud.', gh: 'pretext-word-cloud', demo: 'https://shipitandpray.github.io/pretext-word-cloud/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-code-minimap', desc: 'VS Code-style code minimap for the browser. Canvas-rendered.', gh: 'pretext-code-minimap', demo: 'https://shipitandpray.github.io/pretext-code-minimap/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-diff-navigator', desc: 'Side-by-side diff with drift-free synchronized scroll.', gh: 'pretext-diff-navigator', demo: 'https://shipitandpray.github.io/pretext-diff-navigator/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-overflow-menu', desc: 'Nav bar overflow menu correct on frame 1. No flicker.', gh: 'pretext-overflow-menu', demo: 'https://shipitandpray.github.io/pretext-overflow-menu/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-repl', desc: 'REPL notebook where output cells never shift other cells.', gh: 'pretext-repl', demo: 'https://shipitandpray.github.io/pretext-repl/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-ssr', desc: 'SSR zero-CLS font loading. Predicts text height for fallback and loaded fonts.', gh: 'pretext-ssr', demo: 'https://shipitandpray.github.io/pretext-ssr/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-rn', desc: 'React Native text measurement bridge for FlatList getItemLayout.', gh: 'pretext-rn', demo: 'https://shipitandpray.github.io/pretext-rn/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-storybook', desc: 'Stress-test UI components with dynamic text. Flags overflow.', gh: 'pretext-storybook', demo: 'https://shipitandpray.github.io/pretext-storybook/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-devtools', desc: 'Overlay Pretext measurements on any webpage. Predicted vs actual.', gh: 'pretext-devtools', demo: 'https://shipitandpray.github.io/pretext-devtools/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-a11y', desc: 'WCAG text overflow audit in CI. No browser needed.', gh: 'pretext-a11y', demo: 'https://shipitandpray.github.io/pretext-a11y/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-i18n', desc: 'Catch i18n text overflow at build time. No browser needed.', gh: 'pretext-i18n', demo: 'https://shipitandpray.github.io/pretext-i18n/' },
+  { cat: 'Pretext Ecosystem', cls: 'pretext', name: 'pretext-overflow-monitor', desc: 'Detect text overflow in CI. Zero DOM, pure arithmetic.', gh: 'pretext-overflow-monitor', demo: 'https://shipitandpray.github.io/pretext-overflow-monitor/' },
+
+  // ===== BUDDY ECOSYSTEM =====
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-card', desc: 'Generate shareable trading cards for your Claude Code /buddy.', gh: 'buddy-card', demo: 'https://shipitandpray.github.io/buddy-card/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-battle', desc: 'PvP stat battles. Two buddy IDs enter, one wins.', gh: 'buddy-battle', demo: 'https://shipitandpray.github.io/buddy-battle/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-grid', desc: 'Complete species encyclopedia. All 18 species, all rarities.', gh: 'buddy-grid', demo: 'https://shipitandpray.github.io/buddy-grid/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-dex', desc: 'Pokedex-style completion tracker. Gotta discover em all.', gh: 'buddy-dex', demo: 'https://shipitandpray.github.io/buddy-dex/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-memory', desc: 'Give your buddy persistent memory with decay.', gh: 'buddy-memory', demo: 'https://shipitandpray.github.io/buddy-memory/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-lore', desc: 'AI-generated origin stories, side quests, and rivals.', gh: 'buddy-lore', demo: 'https://shipitandpray.github.io/buddy-lore/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-census', desc: 'Live population dashboard. How many Legendaries exist?', gh: 'buddy-census', demo: 'https://shipitandpray.github.io/buddy-census/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-funeral', desc: 'Memorial wall for lost pets. Gone but not garbage collected.', gh: 'buddy-funeral', demo: 'https://shipitandpray.github.io/buddy-funeral/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-embed', desc: 'Drop-in embeddable widget. One script tag, any website.', gh: 'buddy-embed', demo: 'https://shipitandpray.github.io/buddy-embed/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-ci', desc: 'GitHub Action: buddy comments on PRs based on diff stats.', gh: 'buddy-ci', demo: 'https://shipitandpray.github.io/buddy-ci/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-postbot', desc: 'Automated daily buddy spotlights for X/Twitter.', gh: 'buddy-postbot', demo: 'https://shipitandpray.github.io/buddy-postbot/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-crypto-oracle', desc: 'Your buddy predicts the crypto market. Pure meme.', gh: 'buddy-crypto-oracle', demo: 'https://shipitandpray.github.io/buddy-crypto-oracle/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-compress-hof', desc: 'Compress your buddy into the shortest share code. Hall of fame.', gh: 'buddy-compress-hof', demo: 'https://shipitandpray.github.io/buddy-compress-hof/' },
+  { cat: 'Claude Code Buddy', cls: 'buddy', name: 'buddy-drop', desc: 'Daily compressed archive of buddy sightings. Track the rarest.', gh: 'buddy-drop', demo: 'https://shipitandpray.github.io/buddy-drop/' },
+
+  // ===== FUN BUILDS (Vercel) =====
+  { cat: 'Fun Builds', cls: 'fun', name: 'terminalvsguide', desc: 'Terminal vs GUI — the eternal debate, visualized.', gh: 'terminalvsguide', demo: 'https://terminalvsguide.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'stackrankings', desc: 'Stack rank anything. Drag, drop, argue.', gh: 'stackrankings', demo: 'https://stackrankings.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'devmotivation2', desc: 'Developer demotivational posters.', gh: 'devmotivation2', demo: 'https://devmotivation2.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'codingplaylist', desc: 'Curated coding playlists.', gh: 'codingplaylist', demo: 'https://codingplaylist.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'kanbanzen', desc: 'Minimal kanban board.', gh: 'kanbanzen', demo: 'https://kanbanzen-theta.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'imposter', desc: 'Imposter syndrome simulator.', gh: 'imposter', demo: 'https://imposter-theta-two.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'featurecreep', desc: 'Feature creep visualizer.', gh: 'featurecreep', demo: 'https://featurecreep-five.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'devfortune', desc: 'Developer fortune cookies.', gh: 'devfortune', demo: 'https://devfortune.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'devbingo', desc: 'Developer meeting bingo.', gh: 'devbingo', demo: 'https://devbingo.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'codereviewbingo', desc: 'Code review bingo.', gh: 'codereviewbingo', demo: 'https://codereviewbingo.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'cloudchoice', desc: 'Which cloud provider should you pick?', gh: 'cloudchoice', demo: 'https://cloudchoice.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'bugpriority', desc: 'Bug priority decision maker.', gh: 'bugpriority', demo: 'https://bugpriority.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'awsbill', desc: 'AWS bill shock simulator.', gh: 'awsbill', demo: 'https://awsbill.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'apistatusmood', desc: 'API status as mood rings.', gh: 'apistatusmood', demo: 'https://apistatusmood.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'alertfatigue', desc: 'Alert fatigue simulator.', gh: 'alertfatigue', demo: 'https://alertfatigue.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'cacheinvalidation', desc: 'Cache invalidation naming tool.', gh: 'cacheinvalidation', demo: 'https://cacheinvalidation.vercel.app' },
+  { cat: 'Fun Builds', cls: 'fun', name: 'retrospective', desc: 'Sprint retrospective tool.', gh: 'retrospective', demo: 'https://retrospective-lovat.vercel.app' },
+];
+
+const gh = 'https://github.com/ShipItAndPray/';
+const pages = 'https://shipitandpray.github.io/';
+
+function render(filter) {
+  const f = (filter || '').toLowerCase();
+  const visible = f ? projects.filter(p => (p.name + p.desc + p.cat).toLowerCase().includes(f)) : projects;
+  const cats = [...new Set(visible.map(p => p.cat))];
+  const container = document.getElementById('projects');
+  container.innerHTML = cats.map(cat => {
+    const items = visible.filter(p => p.cat === cat);
+    return '<div class="section"><div class="sec-title">' + cat + ' <span class="sec-count">' + items.length + '</span></div><div class="grid">' +
+      items.map(p => {
+        const demoUrl = p.demo || (pages + p.gh + '/');
+        return '<a class="card" href="' + demoUrl + '" target="_blank"><div class="m ' + p.cls + '">' + p.cat + '</div><h3>' + p.name + '</h3><p>' + p.desc + '</p><div class="links"><a href="' + gh + p.gh + '">GitHub</a>' + (p.demo ? '<a href="' + p.demo + '">Live</a>' : '') + '</div></a>';
+      }).join('') + '</div></div>';
+  }).join('');
+}
+
+document.getElementById('search').addEventListener('input', e => render(e.target.value));
+render();
+</script>
 </body>
 </html>
