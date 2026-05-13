@@ -63,7 +63,7 @@
       <div class="stat"><div class="stat-v g">50+</div><div class="stat-l">Live Demos</div></div>
       <div class="stat"><div class="stat-v r">4</div><div class="stat-l">MCP Servers</div></div>
       <div class="stat"><div class="stat-v a">42</div><div class="stat-l">Pretext Packages</div></div>
-      <div class="stat"><div class="stat-v" style="color:#f5a623">2</div><div class="stat-l">iOS Apps</div></div>
+      <div class="stat"><div class="stat-v" style="color:#f5a623">3</div><div class="stat-l">iOS Apps</div></div>
     </div>
   </div>
 
@@ -78,6 +78,7 @@
 <script>
 const projects = [
   // ===== iOS APPS (App Store) =====
+  { cat: 'iOS Apps', cls: 'ios', name: 'FORM/X', desc: 'Anonymous AI physique coach. Take a photo, AI scores 17 muscle regions in ~20 seconds, generates a weak-link workout plan. No account, no email, photos deleted on scan.', appstore: 'https://apps.apple.com/app/id6766165097', status: 'live', featured: true },
   { cat: 'iOS Apps', cls: 'ios', name: 'Likhita Rama', desc: 'Devotional mantra-writing app — write Sri Rama Rama Rameti as a vow. Telugu script, ships completed Rama Koti to Bhadrachalam temple. Likhita Foundation.', appstore: 'https://apps.apple.com/app/id6766999832', status: 'live', featured: true },
   { cat: 'iOS Apps', cls: 'ios', name: 'Likhita Ram', desc: 'Devotional mantra-writing app — write Sita Ram as a vow. Hindi/Devanagari script, ships completed Ram Naam Lekhan to the Ram Naam Bank in Varanasi.', appstore: 'https://apps.apple.com/app/id6766999936', status: 'review' },
 
@@ -205,7 +206,7 @@ function render(filter) {
         const primaryUrl = p.appstore || p.demo || (pages + p.gh + '/');
         const badge = p.status === 'live' ? '<span class="badge live">Live</span>' : p.status === 'review' ? '<span class="badge review">In Review</span>' : '';
         const links = p.appstore
-          ? '<a href="' + p.appstore + '">App Store</a>'
+          ? '<a href="' + p.appstore + '">Download on App Store</a>'
           : '<a href="' + gh + p.gh + '">GitHub</a>' + (p.demo ? '<a href="' + p.demo + '">Live</a>' : '');
         return '<a class="card" href="' + primaryUrl + '" target="_blank"><div class="m ' + p.cls + '">' + p.cat + '</div><h3>' + p.name + badge + '</h3><p>' + p.desc + '</p><div class="links">' + links + '</div></a>';
       }).join('') + '</div></div>';
