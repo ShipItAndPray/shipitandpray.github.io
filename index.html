@@ -83,6 +83,7 @@ const projects = [
   { cat: 'iOS Apps', cls: 'ios', name: 'Likhita Ram', desc: 'Devotional mantra-writing app — write Sita Ram as a vow. Hindi/Devanagari script, ships completed Ram Naam Lekhan to the Ram Naam Bank in Varanasi.', appstore: 'https://apps.apple.com/app/id6766999936', status: 'review' },
 
   // ===== CRYPTO SECURITY =====
+  { cat: 'Crypto Security', cls: 'crypto', name: 'Eternal Rama Koti', desc: 'A shared Rama Koti on Ethereum mainnet. One transaction writes one name of Rama in Telugu, Tamil, Hindi, or English and mints it as a fully on-chain soulbound NFT. No owner, no server, closes at one crore names.', gh: 'eternal-rama-koti', demo: 'https://shipitandpray.github.io/eternal-rama-koti/', opensea: 'https://opensea.io/collection/eternal-rama-koti', featured: true },
   { cat: 'Crypto Security', cls: 'crypto', name: 'chain911', desc: 'Crypto exploit alert relay. Verified researchers broadcast to protocol teams. Real Postgres, real webhooks, $2.3B+ real exploit data.', gh: 'chain911', demo: 'https://chain911.vercel.app', featured: true },
   { cat: 'Crypto Security', cls: 'crypto', name: 'mcp-market-data', desc: 'Live crypto market data MCP server. 8 tools: price, OHLCV, order book, technical analysis. No API keys.', gh: 'mcp-market-data' },
 
@@ -207,7 +208,7 @@ function render(filter) {
         const badge = p.status === 'live' ? '<span class="badge live">Live</span>' : p.status === 'review' ? '<span class="badge review">In Review</span>' : '';
         const links = p.appstore
           ? '<a href="' + p.appstore + '">Download on App Store</a>'
-          : '<a href="' + gh + p.gh + '">GitHub</a>' + (p.demo ? '<a href="' + p.demo + '">Live</a>' : '');
+          : '<a href="' + gh + p.gh + '">GitHub</a>' + (p.demo ? '<a href="' + p.demo + '">Live</a>' : '') + (p.opensea ? '<a href="' + p.opensea + '">OpenSea</a>' : '');
         return '<a class="card" href="' + primaryUrl + '" target="_blank"><div class="m ' + p.cls + '">' + p.cat + '</div><h3>' + p.name + badge + '</h3><p>' + p.desc + '</p><div class="links">' + links + '</div></a>';
       }).join('') + '</div></div>';
   }).join('');
